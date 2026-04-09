@@ -1,218 +1,215 @@
-# Employee-Management-System(EMS)
-📌 Project Overview
+# 🚀 Employee Management System (EMS)
+
+> 💡 A SQL-powered Employee Management System designed to manage and analyze employee data.
+
+## ✨ Highlights
+
+* Built 6 relational tables
+* Implemented Primary & Foreign Keys
+* Created analytical SQL queries
+* Covers complete employee lifecycle
+* Designed for real-world HR use cases
 
-The Employee Management System (EMS) is a SQL-based relational database project designed to manage and analyze employee information within an organization.
+---
 
-This project demonstrates database design, table relationships, and business insights using SQL queries.
+## 📦 Core Modules
 
-The system tracks:
+| Module        | Description              |
+| ------------- | ------------------------ |
+| Employee      | Personal & login details |
+| JobDepartment | Roles & departments      |
+| SalaryBonus   | Salary & bonus structure |
+| Qualification | Skills & education       |
+| Leaves        | Leave tracking           |
+| Payroll       | Salary transactions      |
 
-👨‍💼 Employees
-🏢 Departments & Job Roles
-💰 Salaries & Bonuses
-📅 Leaves & Absences
-🎓 Employee Qualifications
-🧾 Payroll Information
+---
 
-The project also includes analytical SQL queries to generate insights from the database.
+## 🗄️ Database Tables
 
-🗄️ Database Architecture
+### Employee
 
-The EMS database consists of 6 interconnected tables.
+| Column      |
+| ----------- |
+| emp_ID      |
+| firstname   |
+| lastname    |
+| gender      |
+| age         |
+| contact_add |
+| emp_email   |
+| emp_pass    |
+| Job_ID      |
 
-Table	Description
-👨‍💼 Employee	Stores employee personal information
-🏢 JobDepartment	Stores department and job role details
-💰 SalaryBonus	Salary and bonus structure
-🎓 Qualification	Employee qualifications and skills
-📅 Leaves	Employee leave records
-🧾 Payroll	Employee payroll transactions
+---
 
-All tables are connected using Primary Keys and Foreign Keys to maintain data integrity and relational structure.
+### JobDepartment
 
-🧱 Database Tables
-👨‍💼 Employee
+| Column      |
+| ----------- |
+| Job_ID      |
+| jobdept     |
+| name        |
+| description |
+| salaryrange |
 
-Stores personal details of employees.
+---
 
-Columns
+### SalaryBonus
 
-emp_ID
+| Column    |
+| --------- |
+| salary_ID |
+| Job_ID    |
+| amount    |
+| annual    |
+| bonus     |
 
-firstname
+---
 
-lastname
+### Qualification
 
-gender
+| Column       |
+| ------------ |
+| QualID       |
+| Emp_ID       |
+| Position     |
+| Requirements |
+| Date_In      |
 
-age
+---
 
-contact_add
+### Leaves
 
-emp_email
+| Column   |
+| -------- |
+| leave_ID |
+| emp_ID   |
+| date     |
+| reason   |
 
-emp_pass
+---
 
-Job_ID
+### Payroll
 
-🏢 JobDepartment
+| Column       |
+| ------------ |
+| payroll_ID   |
+| emp_ID       |
+| job_ID       |
+| salary_ID    |
+| leave_ID     |
+| date         |
+| report       |
+| total_amount |
 
-Stores job roles and department information.
+---
 
-Columns
+## 📊 SQL Analysis
 
-Job_ID
+### Employee Insights
 
-jobdept
+| Insights                      |
+| ----------------------------- |
+| Total employees               |
+| Department-wise distribution  |
+| Average salary per department |
+| Top 5 highest-paid employees  |
+| Total salary expenditure      |
 
-name
+---
 
-description
+### Department Analysis
 
-salaryrange
+| Insights             |
+| -------------------- |
+| Roles per department |
+| Average salary       |
+| Highest salary roles |
+| Salary distribution  |
 
-💰 SalaryBonus
+---
 
-Stores salary and bonus details.
+### Qualification Analysis
 
-Columns
+| Insights                      |
+| ----------------------------- |
+| Employees with qualifications |
+| Most common qualifications    |
+| Highest qualification holders |
 
-salary_ID
+---
 
-Job_ID
+### Leave Analysis
 
-amount
+| Insights                      |
+| ----------------------------- |
+| Leave trends                  |
+| Average leaves per department |
+| Highest leaves                |
+| Total leaves taken            |
 
-annual
+---
 
-bonus
+### Payroll Analysis
 
-🎓 Qualification
+| Insights           |
+| ------------------ |
+| Monthly payroll    |
+| Bonus distribution |
+| Highest bonus      |
+| Average salary     |
 
-Stores employee qualifications.
+---
 
-Columns
+## ⚙️ Tech Stack
 
-QualID
+| Tool  | Purpose       |
+| ----- | ------------- |
+| MySQL | Database      |
+| SQL   | Querying      |
+| RDBMS | Data modeling |
 
-Emp_ID
+---
 
-Position
+## 📂 Project Structure
 
-Requirements
-
-Date_In
-
-📅 Leaves
-
-Tracks employee leave records.
-
-Columns
-
-leave_ID
-
-emp_ID
-
-date
-
-reason
-
-🧾 Payroll
-
-Stores payroll transactions.
-
-Columns
-
-payroll_ID
-
-emp_ID
-
-job_ID
-
-salary_ID
-
-leave_ID
-
-date
-
-report
-
-total_amount
-
-📊 SQL Data Analysis
-
-This project includes multiple analytical SQL queries to generate business insights.
-
-👥 Employee Insights
-
-✔ Total number of employees
-✔ Department-wise employee distribution
-✔ Average salary per department
-✔ Top 5 highest paid employees
-✔ Total salary expenditure
-
-🏢 Department Analysis
-
-✔ Number of roles in each department
-✔ Average salary per department
-✔ Highest salary roles
-✔ Department salary distribution
-
-🎓 Qualification Analysis
-
-✔ Employees with qualifications
-✔ Most common qualifications
-✔ Employees with highest qualifications
-
-📅 Leave Analysis
-
-✔ Leave trends by year
-✔ Average leaves per department
-✔ Employees with highest leaves
-✔ Total leaves taken
-
-💰 Payroll & Compensation Analysis
-
-✔ Monthly payroll spending
-✔ Department-wise bonus analysis
-✔ Highest bonus distribution
-✔ Average final salary by department
-
-🛠️ Technologies Used
-Tool	Purpose
-🗄️ MySQL	Database management
-📊 SQL	Data querying & analysis
-🧠 Relational Database Design	Table relationships
-📂 Project Structure
-Employee-Management-System
-│
+```
+Employee-Management-System/
 ├── EMSproject.sql
 ├── EMS-ER.pdf
 └── README.md
-💡 Skills Demonstrated
+```
 
-🔹 SQL Query Writing
-🔹 Database Design
-🔹 Data Analysis using SQL
-🔹 Relational Database Modeling
-🔹 Business Insights Extraction
+---
 
-🚀 Future Improvements
+## 💡 Skills
 
-✨ Build a Power BI dashboard
-✨ Create a web interface for EMS
-✨ Add employee performance analytics
-✨ Implement stored procedures and triggers
+* SQL Query Writing
+* Database Design
+* Data Analysis
+* Relational Modeling
+* Business Insights
 
-👩‍💻 Author
+---
+
+## 🚀 Future Improvements
+
+* Power BI Dashboard
+* Web Interface
+* Performance Analytics
+* Stored Procedures & Triggers
+
+---
+
+## 👩‍💻 Author
 
 Jeevana
+Data Analyst
+SQL | Python | Power BI
 
-📊 Data Analyst
-💻 SQL | Python | Power BI
+---
 
-⭐ Support
+## ⭐ Support
 
-If you like this project:
-
-⭐ Star this repository on GitHub
+Star the repository if you like this project
